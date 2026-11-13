@@ -9,7 +9,9 @@ html,body{margin:0;height:100%;background:#0B131C;overflow:hidden}
 #stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:0 0}
 .slide{position:absolute;inset:0;box-sizing:border-box;width:1920px;height:1080px}
 .slide:not(.on){display:none}
-#nav{position:fixed;right:16px;bottom:12px;font:14px Inter,sans-serif;color:#F6F1E7;opacity:.6}
+#track{position:fixed;left:0;right:0;bottom:0;height:8px;background:#0B131C}
+#bar{height:100%;width:0;background:#F28C28;transition:width .3s ease}
+#nav{position:fixed;right:16px;bottom:18px;font:14px Inter,sans-serif;color:#F6F1E7;opacity:.6}
 .slide{padding:128px;background:#F6F1E7;color:#14202E;font-family:'Inter',sans-serif;display:flex;flex-direction:column}
 .slide h1,.slide h2,.slide h3{font-family:'Space Grotesk',sans-serif;margin:0;font-weight:700}
 .slide h1{font-size:120px;line-height:1.1;letter-spacing:-2px}
@@ -252,11 +254,12 @@ html,body{margin:0;height:100%;background:#0B131C;overflow:hidden}
 </section>
 
 </div>
+<div id="track"><div id="bar"></div></div>
 <div id="nav"></div>
 <script>
 var s=[].slice.call(document.querySelectorAll('.slide')),i=0,st=document.getElementById('stage'),nav=document.getElementById('nav');
 function fit(){var k=Math.min(innerWidth/1920,innerHeight/1080);st.style.transform='scale('+k+') translate(-50%,-50%)';}
-function go(n){i=Math.max(0,Math.min(s.length-1,n));s.forEach(function(e,j){e.classList.toggle('on',j===i)});nav.textContent=(i+1)+' / '+s.length;location.hash='#'+(i+1);}
+function go(n){i=Math.max(0,Math.min(s.length-1,n));s.forEach(function(e,j){e.classList.toggle('on',j===i)});nav.textContent=(i+1)+' / '+s.length;document.getElementById('bar').style.width=((i+1)/s.length*100)+'%';location.hash='#'+(i+1);}
 addEventListener('resize',fit);
 addEventListener('keydown',function(e){if(['ArrowRight','PageDown',' ','Enter'].indexOf(e.key)>-1)go(i+1);if(['ArrowLeft','PageUp','Backspace'].indexOf(e.key)>-1)go(i-1);if(e.key==='Home')go(0);if(e.key==='End')go(s.length-1);if(e.key==='f'&&document.documentElement.requestFullscreen)document.documentElement.requestFullscreen();});
 addEventListener('click',function(e){go(e.clientX<innerWidth/3?i-1:i+1)});
