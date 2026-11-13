@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ruta Edge Ecuador</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;height:100%;background:#0B131C;overflow:hidden}
+#stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:0 0}
+.slide{position:absolute;inset:0;box-sizing:border-box;width:1920px;height:1080px}
+.slide:not(.on){display:none}
+#nav{position:fixed;right:16px;bottom:12px;font:14px Inter,sans-serif;color:#F6F1E7;opacity:.6}
+.slide{padding:128px;background:#F6F1E7;color:#14202E;font-family:'Inter',sans-serif;display:flex;flex-direction:column}
+.slide h1,.slide h2,.slide h3{font-family:'Space Grotesk',sans-serif;margin:0;font-weight:700}
+.slide h1{font-size:120px;line-height:1.1;letter-spacing:-2px}
+.slide h2{font-size:64px;line-height:1.1;margin-bottom:56px}
+.slide h3{font-size:40px;line-height:1.15}
+.slide p{margin:0}
+.slide .statement{font-size:104px;line-height:1.1;letter-spacing:-2px;margin-bottom:48px}
+.lead{font-size:40px;line-height:1.3}
+.body{font-size:30px;line-height:1.4}
+.kicker{font-size:24px;line-height:1.3;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#9A4507}
+.meta{font-size:24px;line-height:1.3}
+.dark{background:#14202E;color:#F6F1E7}
+.dark .kicker{color:#F28C28}
+.accent{background:#F28C28;color:#14202E}
+.accent .kicker{color:#14202E}
+.spacer{flex:1}
+.narrow{width:1000px}
+.cards{display:flex;gap:32px}
+.card{flex:1;padding:40px;background:#EAE2D2;border-radius:16px;display:flex;flex-direction:column;gap:16px;animation:rise .5s ease-out both}
+.card:nth-child(2){animation-delay:.12s}
+.card:nth-child(3){animation-delay:.24s}
+.card:nth-child(4){animation-delay:.36s}
+.dark .card{background:#1F2E40}
+.accent .card{background:#F6F1E7}
+.stat{font-family:'Space Grotesk',sans-serif;font-size:64px;line-height:1.1;font-weight:700;color:#A84C08}
+.cols{display:flex;gap:64px;align-items:center}
+.col-text{width:860px;display:flex;flex-direction:column;gap:32px}
+.col-art{flex:1;display:flex;justify-content:center;animation:rise .6s ease-out both}
+.cover-map{position:absolute;right:128px;top:200px;width:580px;height:636px}
+.legend{font-size:24px;line-height:1.3;display:flex;gap:48px}
+.key-now{color:#14202E;font-weight:700}
+.key-new{color:#A84C08;font-weight:700}
+.cmp{width:100%;border-collapse:collapse;font-size:30px;line-height:1.4}
+.cmp th,.cmp td{text-align:left;padding:24px 28px;border-bottom:2px solid #D8CDB8;vertical-align:top}
+.cmp th{font-family:'Space Grotesk',sans-serif;font-weight:700}
+.cmp .row{font-weight:600;color:#A84C08;width:260px}
+.steps{display:flex;flex-direction:column;gap:28px}
+.step{display:flex;gap:32px;align-items:baseline}
+.step-n{font-family:'Space Grotesk',sans-serif;font-size:40px;line-height:1.3;font-weight:700;width:56px;color:#A84C08}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}}
+</style></head><body>
+<div id="stage">
+<section id="cover" class="slide dark">
+<p class="kicker">Think Big por país · Ecuador</p>
+<div class="spacer"></div>
+<h1 class="narrow">Ruta Edge Ecuador</h1>
+<p class="lead narrow" style="margin-top:32px">User Groups y Student Builder Groups, juntos, en todo el país.</p>
+<div class="spacer"></div>
+<p class="meta">Jonathan Terán · AWS User Group Ecuador · 13 de noviembre de 2026</p>
+<svg class="cover-map" viewBox="0 0 620 680" aria-label="Mapa de Ecuador con nueve ciudades marcadas">
+<path d="M237 16 L220 40 L155 62 L115 77 L112 105 L115 155 L90 180 L70 198 L78 222 L48 253 L28 266 L38 315 L44 355 L20 379 L60 402 L90 432 L120 415 L138 405 L148 435 L140 465 L120 490 L90 502 L105 550 L75 560 L80 605 L120 595 L155 605 L175 640 L215 660 L255 615 L270 555 L285 500 L305 465 L335 458 L455 417 L564 313 L598 257 L590 210 L595 172 L560 155 L515 125 L480 135 L430 133 L375 120 L350 78 L310 65 L270 40Z" fill="#1F2E40" stroke="#F6F1E7" stroke-width="3" stroke-linejoin="round"/>
+<g fill="#F6F1E7">
+<circle cx="270" cy="180" r="14"/>
+<circle cx="130" cy="380" r="14"/>
+<circle cx="220" cy="450" r="14"/>
+</g>
+<g fill="#F28C28">
+<circle cx="308" cy="125" r="10"/>
+<circle cx="48" cy="255" r="10"/>
+<circle cx="258" cy="285" r="10"/>
+<circle cx="255" cy="327" r="10"/>
+<circle cx="124" cy="486" r="10"/>
+<circle cx="200" cy="560" r="10"/>
+</g>
+</svg>
+</section>
+
+<section id="hoy" class="slide">
+<h2>La comunidad de Ecuador en 2026</h2>
+<div class="cards">
+<div class="card"><p class="stat">4</p><h3>User Groups</h3><p class="body">Ecuador, Quito, Security Ecuador y AWS Women Ecuador.</p></div>
+<div class="card"><p class="stat">[3]</p><h3>Student Builder Groups</h3><p class="body">Universidad de Cuenca, ESPOL y UIDE. [Confirmar el total]</p></div>
+<div class="card"><p class="stat">4</p><h3>Eventos nacionales</h3><p class="body">Todos en universidades y con entrada gratuita.</p></div>
+</div>
+<div class="spacer"></div>
+<p class="lead">En el Community Day de septiembre, los estudiantes participaron por primera vez.</p>
+</section>
+
+<section id="mapa" class="slide">
+<h2>Todo ocurre en tres ciudades</h2>
+<div class="cols">
+<div class="col-text">
+<table class="cmp">
+<tr><th>Evento de 2026</th><th>Ciudad</th></tr>
+<tr><td>GenAI Day Ecuador · 16 de mayo</td><td class="row">Quito</td></tr>
+<tr><td>GenAI Security Day · 18 de julio</td><td class="row">Guayaquil</td></tr>
+<tr><td>Community Day Ecuador · 5 de septiembre</td><td class="row">Cuenca</td></tr>
+<tr><td>Student Community Day · 14 de noviembre</td><td class="row">Cuenca</td></tr>
+</table>
+<p class="body">Ninguno de los cuatro se hizo en las otras 21 provincias.</p>
+</div>
+<div class="col-art">
+<svg width="600" height="658" viewBox="0 0 620 680" aria-label="Mapa de Ecuador: los eventos de 2026 se hicieron solo en Quito, Guayaquil y Cuenca">
+<path d="M237 16 L220 40 L155 62 L115 77 L112 105 L115 155 L90 180 L70 198 L78 222 L48 253 L28 266 L38 315 L44 355 L20 379 L60 402 L90 432 L120 415 L138 405 L148 435 L140 465 L120 490 L90 502 L105 550 L75 560 L80 605 L120 595 L155 605 L175 640 L215 660 L255 615 L270 555 L285 500 L305 465 L335 458 L455 417 L564 313 L598 257 L590 210 L595 172 L560 155 L515 125 L480 135 L430 133 L375 120 L350 78 L310 65 L270 40Z" fill="#EAE2D2" stroke="#14202E" stroke-width="3" stroke-linejoin="round"/>
+<g fill="#14202E">
+<circle cx="270" cy="180" r="16"/>
+<circle cx="130" cy="380" r="16"/>
+<circle cx="220" cy="450" r="16"/>
+</g>
+<g font-family="Space Grotesk, sans-serif" font-size="28" font-weight="700" fill="#14202E">
+<text x="296" y="190">Quito</text>
+<text x="156" y="390">Guayaquil</text>
+<text x="246" y="460">Cuenca</text>
+</g>
+<rect x="430" y="510" width="170" height="130" rx="12" fill="none" stroke="#14202E" stroke-width="2"/>
+<g fill="#EAE2D2" stroke="#14202E" stroke-width="2">
+<ellipse cx="470" cy="556" rx="16" ry="24"/>
+<ellipse cx="512" cy="566" rx="13" ry="10"/>
+<ellipse cx="552" cy="552" rx="11" ry="8"/>
+</g>
+<text x="515" y="622" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" fill="#14202E">Galápagos</text>
+</svg>
+</div>
+</div>
+</section>
+
+<section id="brecha" class="slide accent">
+<p class="kicker">La oportunidad</p>
+<div class="spacer"></div>
+<h2 class="statement">En Manta, Loja o Ambato también hay universidades y talento.</h2>
+<p class="lead">Lo que falta es que la comunidad llegue hasta allá.</p>
+<div class="spacer"></div>
+</section>
+
+<section id="propuesta" class="slide">
+<h2>Qué es Ruta Edge Ecuador</h2>
+<div class="cols">
+<div class="col-text">
+<p class="lead">Cada evento nacional se transmite en vivo a sedes en universidades de otras provincias.</p>
+<p class="body">Los estudiantes de cada universidad son los anfitriones de su sede.</p>
+<p class="body">Un User Group apadrina la sede con un mentor y la transmisión.</p>
+<p class="body">Cada sede es la semilla de un nuevo Student Builder Group.</p>
+<p class="legend"><span class="key-now">● Sede actual</span><span class="key-new">● Sede candidata</span></p>
+</div>
+<div class="col-art">
+<svg width="600" height="658" viewBox="0 0 620 680" aria-label="Mapa de Ecuador: Quito, Guayaquil y Cuenca conectadas con seis ciudades candidatas: Ibarra, Manta, Ambato, Riobamba, Machala y Loja">
+<path d="M237 16 L220 40 L155 62 L115 77 L112 105 L115 155 L90 180 L70 198 L78 222 L48 253 L28 266 L38 315 L44 355 L20 379 L60 402 L90 432 L120 415 L138 405 L148 435 L140 465 L120 490 L90 502 L105 550 L75 560 L80 605 L120 595 L155 605 L175 640 L215 660 L255 615 L270 555 L285 500 L305 465 L335 458 L455 417 L564 313 L598 257 L590 210 L595 172 L560 155 L515 125 L480 135 L430 133 L375 120 L350 78 L310 65 L270 40Z" fill="#EAE2D2" stroke="#14202E" stroke-width="3" stroke-linejoin="round"/>
+<g stroke="#14202E" stroke-width="3" stroke-dasharray="6 8" fill="none">
+<line x1="270" y1="180" x2="308" y2="125"/>
+<line x1="270" y1="180" x2="258" y2="285"/>
+<line x1="258" y1="285" x2="255" y2="327"/>
+<line x1="130" y1="380" x2="48" y2="255"/>
+<line x1="130" y1="380" x2="124" y2="486"/>
+<line x1="220" y1="450" x2="200" y2="560"/>
+</g>
+<g fill="#F28C28" stroke="#14202E" stroke-width="2">
+<circle cx="308" cy="125" r="12"/>
+<circle cx="48" cy="255" r="12"/>
+<circle cx="258" cy="285" r="12"/>
+<circle cx="255" cy="327" r="12"/>
+<circle cx="124" cy="486" r="12"/>
+<circle cx="200" cy="560" r="12"/>
+</g>
+<g fill="#14202E">
+<circle cx="270" cy="180" r="16"/>
+<circle cx="130" cy="380" r="16"/>
+<circle cx="220" cy="450" r="16"/>
+</g>
+<g font-family="Space Grotesk, sans-serif" font-size="28" font-weight="700" fill="#14202E">
+<text x="296" y="190">Quito</text>
+<text x="156" y="390">Guayaquil</text>
+<text x="246" y="460">Cuenca</text>
+</g>
+<g font-family="Inter, sans-serif" font-size="24" fill="#14202E">
+<text x="330" y="134">Ibarra</text>
+<text x="70" y="264">Manta</text>
+<text x="280" y="294">Ambato</text>
+<text x="277" y="337">Riobamba</text>
+<text x="104" y="495" text-anchor="end">Machala</text>
+<text x="222" y="569">Loja</text>
+</g>
+<rect x="430" y="510" width="170" height="130" rx="12" fill="none" stroke="#14202E" stroke-width="2"/>
+<g fill="#EAE2D2" stroke="#14202E" stroke-width="2">
+<ellipse cx="470" cy="556" rx="16" ry="24"/>
+<ellipse cx="512" cy="566" rx="13" ry="10"/>
+<ellipse cx="552" cy="552" rx="11" ry="8"/>
+</g>
+<text x="515" y="622" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" fill="#14202E">Galápagos</text>
+</svg>
+</div>
+</div>
+</section>
+
+<section id="sede" class="slide">
+<h2>Qué necesita una sede</h2>
+<div class="cards">
+<div class="card"><p class="kicker">01</p><h3>Un aula</h3><p class="body">La universidad presta el espacio y la conexión.</p></div>
+<div class="card"><p class="kicker">02</p><h3>Anfitriones</h3><p class="body">Un grupo de estudiantes convoca y recibe a los asistentes.</p></div>
+<div class="card"><p class="kicker">03</p><h3>Un mentor</h3><p class="body">El User Group padrino acompaña antes y durante el evento.</p></div>
+<div class="card"><p class="kicker">04</p><h3>Transmisión</h3><p class="body">El evento principal se ve en vivo, con preguntas desde la sede.</p></div>
+</div>
+<div class="spacer"></div>
+<p class="lead">Una sede puede empezar con diez personas.</p>
+</section>
+
+<section id="padrinazgo" class="slide">
+<h2>Un User Group padrino para cada grupo estudiantil</h2>
+<table class="cmp">
+<tr><th></th><th>Student Builder Group</th><th>User Group</th></tr>
+<tr><td class="row">Aporta</td><td>Aula, anfitriones y público nuevo</td><td>Mentores, expositores y contacto con empresas</td></tr>
+<tr><td class="row">Recibe</td><td>Mentoría y guía para certificarse</td><td>Nuevos miembros y futuros líderes</td></tr>
+<tr><td class="row">Continuidad</td><td>El líder que se gradúa pasa al User Group</td><td>Recibe a quien egresa y sostiene el vínculo con la universidad</td></tr>
+</table>
+<div class="spacer"></div>
+<p class="lead">Ninguno de los dos puede hacerlo solo.</p>
+</section>
+
+<section id="meta" class="slide">
+<h2>La meta a un año</h2>
+<div class="cards">
+<div class="card"><p class="stat">De [3] a 8</p><h3>Student Builder Groups</h3><p class="body">Cinco grupos nuevos, nacidos de sedes en provincias.</p></div>
+<div class="card"><p class="stat">5</p><h3>Sedes fuera de las tres ciudades</h3><p class="body">Al menos una en la Costa, una en la Sierra y una en la Amazonía.</p></div>
+<div class="card"><p class="stat">1</p><h3>Calendario nacional</h3><p class="body">Todos los grupos comparten fechas, expositores y sede rotativa.</p></div>
+</div>
+<div class="spacer"></div>
+<p class="lead">Es una meta propuesta, para ajustar con la mesa.</p>
+</section>
+
+<section id="piloto" class="slide">
+<h2>Cómo empezar: un piloto con dos sedes</h2>
+<div class="steps">
+<div class="step"><p class="step-n">1</p><p class="lead">Elegir dos universidades en provincias con estudiantes interesados.</p></div>
+<div class="step"><p class="step-n">2</p><p class="lead">Asignar a cada una un User Group padrino y un mentor.</p></div>
+<div class="step"><p class="step-n">3</p><p class="lead">Transmitir a las dos sedes el próximo evento nacional.</p></div>
+<div class="step"><p class="step-n">4</p><p class="lead">Medir asistencia y acompañar a los anfitriones a abrir su Student Builder Group.</p></div>
+</div>
+<div class="spacer"></div>
+<p class="body">Universidades candidatas: [por definir en la mesa]</p>
+</section>
+
+<section id="cierre" class="slide dark">
+<h2>Lo que pedimos</h2>
+<div class="cards">
+<div class="card"><p class="kicker">A AWS</p><h3>Respaldo</h3><p class="body">Apoyo para la transmisión y para abrir nuevos Student Builder Groups.</p></div>
+<div class="card"><p class="kicker">A los User Groups</p><h3>Un padrino</h3><p class="body">Un mentor por cada grupo estudiantil y cada sede nueva.</p></div>
+<div class="card"><p class="kicker">A los estudiantes</p><h3>Una sede</h3><p class="body">Ser anfitriones en su universidad y convocar a su ciudad.</p></div>
+</div>
+<div class="spacer"></div>
+<p class="lead">Ruta Edge Ecuador: una sola comunidad para todo el país.</p>
+</section>
+
+</div>
+<div id="nav"></div>
+<script>
+var s=[].slice.call(document.querySelectorAll('.slide')),i=0,st=document.getElementById('stage'),nav=document.getElementById('nav');
+function fit(){var k=Math.min(innerWidth/1920,innerHeight/1080);st.style.transform='scale('+k+') translate(-50%,-50%)';}
+function go(n){i=Math.max(0,Math.min(s.length-1,n));s.forEach(function(e,j){e.classList.toggle('on',j===i)});nav.textContent=(i+1)+' / '+s.length;location.hash='#'+(i+1);}
+addEventListener('resize',fit);
+addEventListener('keydown',function(e){if(['ArrowRight','PageDown',' ','Enter'].indexOf(e.key)>-1)go(i+1);if(['ArrowLeft','PageUp','Backspace'].indexOf(e.key)>-1)go(i-1);if(e.key==='Home')go(0);if(e.key==='End')go(s.length-1);if(e.key==='f'&&document.documentElement.requestFullscreen)document.documentElement.requestFullscreen();});
+addEventListener('click',function(e){go(e.clientX<innerWidth/3?i-1:i+1)});
+fit();go((parseInt(location.hash.slice(1))||1)-1);
+</script></body></html>
